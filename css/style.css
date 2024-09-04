@@ -1,0 +1,11 @@
+.button-list-wraper a, button{
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: red;
+    border: none;
+}
+
+.button-list-wraper a:hover, button:hover{
+    background-color: red;
+    color: black;
+}
