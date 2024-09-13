@@ -1,9 +1,19 @@
 var inputNumber = document.getElementById("input-myid");
 const submitButton = document.getElementById("capture-button");
+const refreshButton2 = document.getElementById("refresh-modal2");
+const closeButton = document.getElementById("closeButton");
 const viewIndihome = document.getElementById("url-indihome");
 const viewModal = document.getElementById("modalData");
 const Name = document.getElementsByClassName("header-name-modal");
 
+
+refreshButton2.addEventListener("click", function() {
+  document.getElementById('modal2').src += '';
+});
+
+closeButton.addEventListener("click", function() {
+  document.getElementById('modal2').src += '';
+});
 
 submitButton.addEventListener("click", function() {
   console.log(viewModal.style);
