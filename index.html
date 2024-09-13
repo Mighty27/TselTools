@@ -31,18 +31,29 @@
       <div class="button-list-wraper" style="width: 50%;">
         <div class="list-group text-center gap-3">
           <a id="test-button" type="button" class="btn-outline-primary rounded rounded-4 mt-2 p-3" href="https://my.telkomsel.com/prepaid-registration/landing-page" target="_blank">Registrasi Kartu Telkomsel</a>
+          <button type="submit" id="capture-button"
+            class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop1">
+            Beli Paket dan Pulsa
+          </button>
+          <!-- <button type="submit" id="capture-button"
+            class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop2">
+            Grapari Check Tools
+          </button> -->
           <div class="row g-3 align-items-center justify-content-center">
             <div class="col-auto">
               <label for="input-myid" class="col-form-label">MYID-</label>
             </div>
             <div class="col">
-              <input type="number" id="input-myid" class="form-control text-center" placeholder="Input Nomor MYID" value="9032409030481">
+              <input type="number" id="input-myid" class="form-control text-center" placeholder="Input Nomor MYID">
             </div>
           </div>
+          <!-- Modal Indihome -->
           <button type="submit" id="capture-button"
             class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
-            Launch static backdrop modal
+            Cek Progres Indihome
           </button>
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -60,6 +71,53 @@
               </div>
             </div>
           </div>
+          <!-- Modal Pulsa dan Paket -->
+          <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-fullscreen-md-down" id="modalData">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="url-indihome">
+                  <iframe height="520px" width="100%" src="https://www.telkomsel.com/shops/digital-product/package?msisdn=&roaming=&service=PraBayar&sort=&minPrice=&maxPrice=&quota=&type=internet&category=Semua%20Paket" frameborder="0"></iframe>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Understood</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Modal MyGraPari -->
+          <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-fullscreen-md-down" id="modalData">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="url-indihome">
+                  <iframe height="520px" width="100%" src="https://www.telkomsel.com/store/grapari-online/service" frameborder="0"></iframe>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Understood</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- End Modal -->
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ODP Viewer</h5>
+            </div>
+            <iframe height="520px" width="100%" src="https://www.google.com/maps/d/u/0/embed?mid=1p0JX4PwPB1OR22A18LpcNPQMNgTOWpo&ehbc=2E312F&noprof=1" frameborder="0"></iframe>
+          </div>
+
           <!-- <button id="capture-button" class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button"
             type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
             aria-controls="collapseExample">
