@@ -21,25 +21,29 @@
 </head>
 
 <body>
+  <div class="loader-container">
+    <div class="spinner"></div>
+  </div>
   <div class="container-flex" style="height: auto; width: 100%; background-color: black; color: white;">
     <div class="container-flex mb-5" style="padding-top: 100px;">
       <div class="text-warper text-center">
         <h1>All Shortcut Telkomsel Tools</h1>
-        <img src="https://lh3.google.com/u/0/d/1VTwMnaXD1m_CgQmVfFzjVI3WGa07S8M4=w1271-h678-iv2" alt="" style="margin-top: 50px; height: 100px; width: auto;">
+        <img src="https://lh3.google.com/u/0/d/1VTwMnaXD1m_CgQmVfFzjVI3WGa07S8M4=w1271-h678-iv2" alt=""
+          style="margin-top: 50px; height: 100px; width: auto;">
       </div>
     </div>
     <div class="container-flex d-flex justify-content-center" style="margin-top: 50px; padding-bottom: 100px;">
       <div class="button-list-wraper" style="width: auto;">
         <div class="list-group text-center gap-3">
-          <a id="test-button" type="button" class="btn-outline-primary rounded rounded-4 mt-2 p-3" href="https://my.telkomsel.com/prepaid-registration/landing-page" target="_blank">Registrasi Kartu Telkomsel</a>
-          <button type="button"
-            class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop1">
+          <a id="test-button" type="button" class="btn-outline-primary rounded rounded-4 mt-2 p-3"
+            href="https://my.telkomsel.com/prepaid-registration/landing-page" target="_blank">Registrasi Kartu
+            Telkomsel</a>
+          <button type="button" class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button"
+            data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
             Beli Paket dan Pulsa
           </button>
-          <button type="button"
-            class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop2">
+          <button type="button" class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button"
+            data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
             ODP Viewer
           </button>
           <div class="row g-3 align-items-center justify-content-center">
@@ -47,22 +51,22 @@
               <label for="input-myid" class="col-form-label">MYID-</label>
             </div>
             <div class="col">
-              <input type="number" id="input-myid" class="form-control text-center no-spinner" placeholder="Input Nomor MYID">
+              <input type="number" id="input-myid" class="form-control text-center no-spinner"
+                placeholder="Input Nomor MYID" maxlength="13">
             </div>
           </div>
           <!-- Modal Indihome -->
           <button type="submit" id="capture-button"
-            class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop">
+            class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button">
             Cek Progres Indihome
           </button>
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-md-down" id="modalData">
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" class="btn-close" id="closeModal1" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="url-indihome"></div>
                 <!-- <div class="modal-footer">
@@ -79,11 +83,15 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1>
-                  <button type="button" id="refresh-modal2" class="btn btn-light bi bi-arrow-clockwise" aria-label="Refresh"></button>
-                  <button type="button" class="btn-close" id="closeButton" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" id="refresh-modal2" class="btn btn-light bi bi-arrow-clockwise"
+                    aria-label="Refresh"></button>
+                  <button type="button" class="btn-close" id="closeButton" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="url-indihome">
-                  <iframe name="modalMax2" id="modal2" height="520px" width="100%" src="https://www.telkomsel.com/shops/digital-product/package?msisdn=&roaming=&service=PraBayar&sort=&minPrice=&maxPrice=&quota=&type=internet&category=Semua%20Paket" frameborder="0"></iframe>
+                  <iframe name="modalMax2" id="modal2" height="520px" width="100%"
+                    src="https://www.telkomsel.com/shops/digital-product/package?msisdn=&roaming=&service=PraBayar&sort=&minPrice=&maxPrice=&quota=&type=internet&category=Semua%20Paket"
+                    frameborder="0"></iframe>
                 </div>
                 <!-- <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -99,10 +107,13 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick="reload"></button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    onClick="reload"></button>
                 </div>
                 <div class="modal-body" id="url-indihome">
-                  <iframe height="520px" width="100%" src="https://www.google.com/maps/d/embed?mid=1H5S230PHqnmz1s1DHl1oio8CXo1m-uA&hl=en&ehbc=2E312F&noprof=1" frameborder="0"></iframe>
+                  <iframe height="520px" width="100%"
+                    src="https://www.google.com/maps/d/embed?mid=1H5S230PHqnmz1s1DHl1oio8CXo1m-uA&hl=en&ehbc=2E312F&noprof=1"
+                    frameborder="0"></iframe>
                 </div>
                 <!-- <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -132,6 +143,27 @@
       </div>
     </div>
   </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div role="alert" class="toast" id="liveToast" aria-live="assertive" aria-atomic="true" class="toast">
+      <div class="toast-header">
+        <i class="bi bi-exclamation-diamond"></i>
+        <strong class="me-auto"> Warning</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Nomor MYID tidak valid!!
+      </div>
+    </div>
+  </div>
+  <script>
+    function enforce_maxlength(event) {
+      var t = event.target;
+      if (t.hasAttribute('maxlength')) {
+        t.value = t.value.slice(0, t.getAttribute('maxlength'));
+      }
+    };
+    document.body.addEventListener('input', enforce_maxlength);
+  </script>
   <script src="./script/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
     integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
