@@ -2,7 +2,6 @@ var inputNumber = document.getElementById("input-myid");
 const submitButton = document.getElementById("capture-button");
 const viewIndihome = document.getElementById("url-indihome");
 const viewModal = document.getElementById("modalData");
-const button = document.getElementsByClassName("capture-button");
 const Name = document.getElementsByClassName("header-name-modal");
 
 
