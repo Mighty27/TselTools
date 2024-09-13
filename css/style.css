@@ -1,11 +1,15 @@
-.button-list-wraper a, button{
+html {
+    background-color: black;
+}
+
+.button-list-wraper a, .capture-button{
     text-decoration: none;
     background-color: whitesmoke;
     color: red;
     border: none;
 }
 
-.button-list-wraper a:hover, button:hover{
+.button-list-wraper a:hover, .capture-button:hover{
     background-color: red;
     color: black;
 }
