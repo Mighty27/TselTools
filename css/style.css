@@ -13,3 +13,9 @@ html {
     background-color: red;
     color: black;
 }
+
+input[type=number].no-spinner::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+     margin: 0; 
+}
