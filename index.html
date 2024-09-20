@@ -25,14 +25,14 @@
     <div class="spinner"></div>
   </div>
   <div class="container-flex" style="height: auto; width: 100%; background-color: black; color: white;">
-    <div class="container-flex mb-5" style="padding-top: 100px;">
+    <div class="container-flex mb-5 mt-3">
       <div class="text-warper text-center">
         <h1>All Shortcut Telkomsel Tools</h1>
         <img src="https://lh3.google.com/u/0/d/1VTwMnaXD1m_CgQmVfFzjVI3WGa07S8M4=w1271-h678-iv2" alt=""
           style="margin-top: 50px; height: 100px; width: auto;">
       </div>
     </div>
-    <div class="container-flex d-flex justify-content-center" style="margin-top: 50px; padding-bottom: 100px;">
+    <div class="container-flex d-flex justify-content-center">
       <div class="button-list-wraper" style="width: auto;">
         <div class="list-group text-center gap-3">
           <a id="test-button" type="button" class="btn-outline-primary rounded rounded-4 mt-2 p-3"
@@ -46,7 +46,7 @@
             data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
             ODP Viewer
           </button>
-          <div class="row g-3 align-items-center justify-content-center">
+          <!-- <div class="row g-3 align-items-center justify-content-center">
             <div class="col-auto">
               <label for="input-myid" class="col-form-label">MYID-</label>
             </div>
@@ -54,19 +54,31 @@
               <input type="number" id="input-myid" class="form-control text-center no-spinner"
                 placeholder="Input Nomor MYID" maxlength="13">
             </div>
-          </div>
+          </div> -->
           <!-- Modal Indihome -->
-          <button type="submit" id="capture-button"
+          <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
             class="btn-outline-primary rounded rounded-4 mt-2 p-3 capture-button">
-            Cek Progres Indihome
+            MYID Indihome Checker
           </button>
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-md-down" id="modalData">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1>
-                  <button type="button" class="btn-close" id="closeModal1" aria-label="Close"></button>
+                  <div class="col-auto">
+                    <label for="input-myid" class="col-form-label" style="color: black;">MYID-</label>
+                  </div>
+                  <div class="col-3">
+                    <input type="number" id="input-myid" class="form-control text-center no-spinner"
+                      placeholder="Input Nomor MYID" maxlength="13">
+                  </div>
+                  <button type="submit" id="capture-button"
+                    class="btn-outline-primary rounded rounded-4 m-2 capture-button">
+                    Cek Progress
+                  </button>
+                  <!-- <h1 class="modal-title fs-5 header-name-modal" id="staticBackdropLabel"></h1> -->
+                  <button type="button" class="btn-close" id="closeButton" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="url-indihome"></div>
                 <!-- <div class="modal-footer">
@@ -88,8 +100,10 @@
                   <button type="button" class="btn-close" id="closeButton" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="url-indihome">
-                  <iframe name="modalMax2" id="modal2" height="520px" width="100%"
+                <div class="modal-body">
+                  <!-- <iframe name="modalMax2" id="modal2" height="520px" width="100%"
+                    src="https://www.byu.id/v2/i-renew/telco#pilih-paket" frameborder="0" target="_parent"></iframe> -->
+                  <iframe name="modalMax2" id="modal2"  height="520px" width="100%"
                     src="https://www.telkomsel.com/shops/digital-product/package?msisdn=&roaming=&service=PraBayar&sort=&minPrice=&maxPrice=&quota=&type=internet&category=Semua%20Paket"
                     frameborder="0"></iframe>
                 </div>
@@ -112,7 +126,7 @@
                 </div>
                 <div class="modal-body" id="url-indihome">
                   <iframe height="520px" width="100%"
-                    src="https://www.google.com/maps/d/embed?mid=1xv8hQldR0XJWuy5P-687M1fZPVYwfNs&ehbc=2E312F&noprof=1"
+                    src="https://www.google.com/maps/d/embed?mid=1H5S230PHqnmz1s1DHl1oio8CXo1m-uA&hl=en&ehbc=2E312F&noprof=1"
                     frameborder="0"></iframe>
                 </div>
                 <!-- <div class="modal-footer">
@@ -165,6 +179,8 @@
     document.body.addEventListener('input', enforce_maxlength);
   </script>
   <script src="./script/script.js"></script>
+  <!-- <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script> -->
+  <script type="module" src="./script/x-frame-bypass.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
     integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
